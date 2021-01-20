@@ -19,13 +19,13 @@ def hbnb():
 
 @app.route("/c")
 @app.route("/c/<message>")
-def c(message="is_fun"):
+def c(message="is_cool"):
     return "C {}".format(message.replace("_", " "))
 
 
 @app.route("/python")
 @app.route("/python/<message>")
-def python(message="is_fun"):
+def python(message="is_cool"):
     return "Python {}".format(message.replace("_", " "))
 
 
