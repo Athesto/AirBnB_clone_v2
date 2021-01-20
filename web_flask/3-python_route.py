@@ -26,7 +26,7 @@ def c(message="is_fun"):
 @app.route("/python")
 @app.route("/python/<message>")
 def python(message="is_fun"):
-    return "python {}".format(message.replace("_", " "))
+    return "Python {}".format(message.replace("_", " "))
 
 
 if __name__ == '__main__':
