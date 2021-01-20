@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 '''module flask app default'''
 
-from flask import Flask
+from flask import Flask, request
 app = Flask(__name__)
 app.url_map.strict_slashes = False
 
@@ -19,14 +19,11 @@ def hbnb():
 
 @app.route("/c")
 @app.route("/c/<message>")
-def c(message="is_cool"):
-    return "C {}".format(message.replace("_", " "))
-
-
 @app.route("/python")
 @app.route("/python/<message>")
-def python(message="is_cool"):
-    return "Python {}".format(message.replace("_", " "))
+def lang(message="is_cool"):
+    lang = request.path.split('/')[1]
+    return "{} {}".format(lang.capitalize(), message.replace("_", " "))
 
 
 if __name__ == '__main__':
