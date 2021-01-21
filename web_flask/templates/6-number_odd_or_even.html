@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HBNB</title>
+</head>
+<BODY>
+	{%- set even_odd = ["odd", "even"][n % 2] %}
+	{%- set even_odd = "odd" if n % 2 else "even" %}
+	{%- set even_odd = "odd" if n is odd else "even" %} 
+	<H1>Number: {{ n }} is {{ even_odd }}</H1>
+</BODY>
+</html>
