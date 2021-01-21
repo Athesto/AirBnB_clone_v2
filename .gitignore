@@ -6,3 +6,4 @@ tags
 file.json
 *.py~
 tmp/
+*.pyc
